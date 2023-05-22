@@ -41,3 +41,37 @@ class DefaultTypingBuilder extends StatelessWidget {
     );
   }
 }
+
+/*
+* 仅适配我本地项目
+*/
+class NewTypingBuilder extends StatelessWidget {
+  const NewTypingBuilder({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 15, top: 25),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget>[
+          const Padding(
+            padding: EdgeInsets.only(right: 2),
+            child: TypingIndicator(),
+          ),
+          // Text(
+          //   user.getFullName(),
+          //   style: const TextStyle(
+          //     fontSize: 12,
+          //     fontWeight: FontWeight.bold,
+          //   ),
+          // ),
+          Text(
+            ' 请稍等',
+            style: const TextStyle(fontSize: 12),
+          ),
+        ],
+      ),
+    );
+  }
+}
